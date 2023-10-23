@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function add(){
+        function add() {
             var fnum1 = document.getElementById("text1").value;
             var fnum2 = document.getElementById("text2").value;
-            var total= document.getElementById("result");
-            total.value=(+fnum1 + +fnum2);
+            var total = document.getElementById("result");
+            total.value = (+fnum1 + +fnum2);
         }
-        function sub(){
+        function sub() {
             var fnum1 = document.getElementById("text1").value;
             var fnum2 = document.getElementById("text2").value;
-            var total= document.getElementById("result");
-            total.value=(+fnum1 - +fnum2);
+            var total = document.getElementById("result");
+            total.value = (+fnum1 - +fnum2);
         }
-        function mul(){
+        function mul() {
             var fnum1 = document.getElementById("text1").value;
             var fnum2 = document.getElementById("text2").value;
-            var total= document.getElementById("result");
-            total.value=(+fnum1 * +fnum2);
+            var total = document.getElementById("result");
+            total.value = (+fnum1 * +fnum2);
         }
-        function div(){
+        function div() {
             var fnum1 = document.getElementById("text1").value;
             var fnum2 = document.getElementById("text2").value;
-            var total= document.getElementById("result");
-            total.value=(+fnum1 / +fnum2);
+            var total = document.getElementById("result");
+            total.value = (+fnum1 / +fnum2);
         }
     </script>
     <style>
-        h1::after
-        {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1::after {
             content: "";
             width: 0;
             height: 3px;
             background-color: black;
-            margin:auto;
+            margin: auto;
             display: block;
         }
-        h1:hover::after
-        {
+
+        h1:hover::after {
             width: 100%;
             transition: width 0.5s linear;
-            
-        }
-        body
-        {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 90vh;
-          background-color: #1d2b3a;
-        }
-        .mydiv
-        {
-          border-style: solid;
-          background-color: silver;
-          border-radius: 15px;
-          height: 350px;
-          width: 500px;
-          padding: 10px;
-          text-align: center;
-          
-          
+
         }
 
-        button{
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background-color: #1d2b3a;
+        }
+
+        .mydiv {
+            border-style: solid;
+            background-color: silver;
+            border-radius: 15px;
+            height: 350px;
+            width: 500px;
+            padding: 10px;
+            text-align: center;
+
+
+        }
+
+        button {
             box-shadow: 0 0 5px cyan,
-            0 0 25px cyan;
+                0 0 25px cyan;
             background-color: cyan;
             border: none;
-            padding:6px;
+            padding: 6px;
             margin: 5px;
-            
+
         }
-        input[name="box"]
-        {
+
+        input[name="box"] {
             background-color: silver;
             border: 1px solid;
             border-radius: 4px;
@@ -85,28 +91,46 @@
             width: 150px;
             font-weight: bold;
         }
+
         button:hover {
             box-shadow: 0 0 5px cyan,
-            0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+                0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
         }
-        label
-        {
-            
+
+        label {
+
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <div class="mydiv">
-    <h1>Arithmetic Operations Two Number </h1><br>
-    <label for="">Enter the First Number :</label>  <input id="text1" name="box" placeholder="Enter the Number" ><br><br>
-    <label for=""> Enter the Second Number :</label> <input id="text2" name="box" placeholder="Enter the number" ><br><br>
-    <label for=""> Result : </label><input type="text" id="result"  name="box" placeholder="Result">
+        <h1>Arithmetic Operations Two Number </h1><br>
+        <div style="display: flex;
+        justify-content: center;">
+            <div style="display: flex;
+            flex-direction: column;
+            gap: 5px;">
+                <p style="padding: 5px;"> Enter the First Number :</p>
+                <p> Enter the Second Number :</p>
+                <p> Result : </p>
+            </div>
+            <div style="display: flex;
+        flex-direction: column;
+        align-items: flex-start;">
+                <input id="text1" name="box" placeholder="Enter the Number">
+                <input id="text2" name="box" placeholder="Enter the number">
+                <input type="text" id="result" name="box" placeholder="Result">
 
-      <br><br><br><br><button onclick="add()">Addition</button>
-      <button onclick="sub()">Subtraction</button>
-      <button onclick="mul()">Multiplication</button>
-      <button onclick="div()">Division</button>
+            </div>
+        </div>
+
+        <br><br><br><br><button onclick="add()">Addition</button>
+        <button onclick="sub()">Subtraction</button>
+        <button onclick="mul()">Multiplication</button>
+        <button onclick="div()">Division</button>
     </div>
 </body>
+
 </html>
